@@ -1,4 +1,3 @@
-<!-- index.html -->
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -61,86 +60,6 @@
       bottom: 0;
       width: 100%;
     }
-    .whatsapp-button {
-      display: inline-block;
-      margin-top: 20px;
-      padding: 10px 20px;
-      background-color: #25d366;
-      color: white;
-      text-decoration: none;
-      border-radius: 5px;
-      font-weight: bold;
-    }
-    .whatsapp-button:hover {
-      background-color: #1ebe5d;
-    }
-    form {
-      max-width: 500px;
-      margin: 40px auto;
-      padding: 30px;
-      background-color: #ffffff;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-      border-radius: 8px;
-    }
-    form h3 {
-      margin-bottom: 20px;
-      color: #1a73e8;
-    }
-    label {
-      display: block;
-      margin-top: 15px;
-      text-align: left;
-      font-weight: bold;
-    }
-    input, textarea {
-      width: 100%;
-      padding: 12px;
-      margin-top: 5px;
-      border: 1px solid #ccc;
-      border-radius: 4px;
-      box-sizing: border-box;
-      font-size: 14px;
-    }
-    button {
-      margin-top: 20px;
-      padding: 12px 25px;
-      background-color: #1a73e8;
-      color: white;
-      border: none;
-      border-radius: 4px;
-      font-size: 16px;
-      cursor: pointer;
-      transition: background-color 0.3s ease;
-    }
-    button:hover {
-      background-color: #155ab6;
-    }
-    table {
-      width: 100%;
-      max-width: 800px;
-      margin: 20px auto;
-      border-collapse: collapse;
-      background-color: white;
-      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-    }
-    th, td {
-      padding: 12px;
-      border: 1px solid #ccc;
-      text-align: left;
-    }
-    th {
-      background-color: #1a73e8;
-      color: white;
-    }
-    .highlight-low {
-      background-color: #e0f7fa;
-    }
-    .highlight-medium {
-      background-color: #fff3e0;
-    }
-    .highlight-high {
-      background-color: #fdecea;
-    }
     .faq {
       max-width: 800px;
       margin: 20px auto;
@@ -180,70 +99,74 @@
   </nav>
 
   <main>
-    <!-- (Secciones existentes sin cambios) -->
+    <section id="nosotros" class="active">
+      <h2>Nosotros</h2>
+      <p>Somos un equipo multidisciplinario de profesionales con experiencia en asesoría financiera, inversiones y desarrollo de proyectos.</p>
+    </section>
+
+    <section id="servicios">
+      <h2>Servicios</h2>
+      <p>Asesoría financiera, planificación de inversiones, acompañamiento personalizado.</p>
+    </section>
+
+    <section id="productos">
+      <h2>Productos</h2>
+      <ul>
+        <li>🔒 Ahorro con rentabilidad asegurada</li>
+        <li>💳 Tarjetas de inversión prepago</li>
+        <li>🏦 Planes de retiro</li>
+        <li>📘 Guías para principiantes</li>
+      </ul>
+    </section>
+
+    <section id="contacto">
+      <h2>Contacto</h2>
+      <p>¿Tienes dudas? Escríbenos directamente.</p>
+    </section>
+
+    <section id="formulario">
+      <h2>Formulario de Contacto</h2>
+      <form action="https://formsubmit.co/inviertoook@gmail.com" method="post">
+        <input type="hidden" name="_captcha" value="false">
+        <label>Nombre:<input type="text" name="nombre" required></label>
+        <label>Email:<input type="email" name="email" required></label>
+        <label>Mensaje:<textarea name="mensaje" rows="4" required></textarea></label>
+        <button type="submit">Enviar</button>
+      </form>
+    </section>
+
+    <section id="ayuda">
+      <h2>Ayuda</h2>
+      <p>Para soporte, contáctanos vía WhatsApp o formulario.</p>
+    </section>
 
     <section id="inversiones">
       <h2>Inversiones</h2>
-      <p>Descubre nuestras oportunidades de inversión: fondos mutuos, bienes raíces, renta fija y portafolios personalizados según tu perfil de riesgo.</p>
-
-      <table>
-        <thead>
-          <tr>
-            <th>Tipo de Inversión</th>
-            <th>Rentabilidad Estimada</th>
-            <th>Riesgo</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr class="highlight-medium">
-            <td>Fondos Mutuos</td>
-            <td>6% anual</td>
-            <td>Moderado</td>
-          </tr>
-          <tr class="highlight-low">
-            <td>Bienes Raíces</td>
-            <td>5-8% anual</td>
-            <td>Bajo a Moderado</td>
-          </tr>
-          <tr class="highlight-low">
-            <td>Renta Fija</td>
-            <td>4% anual</td>
-            <td>Bajo</td>
-          </tr>
-          <tr class="highlight-high">
-            <td>Portafolio Personalizado</td>
-            <td>8-12% anual</td>
-            <td>Variable (según perfil)</td>
-          </tr>
-        </tbody>
-      </table>
-
-      <h3>Oportunidades de Inversión</h3>
-      <ul>
-        <li>🏢 Desarrollo inmobiliario en Santiago centro</li>
-        <li>🌱 Fondo verde de inversión en energías renovables</li>
-        <li>💼 Renta fija con garantía estatal (bonos)</li>
-        <li>📈 Startups tecnológicas con alto potencial</li>
-      </ul>
-
+      <p>Descubre nuestras oportunidades y preguntas frecuentes.</p>
       <div class="faq">
-        <h3>Preguntas Frecuentes</h3>
-        <details>
-          <summary>¿Qué monto mínimo necesito para invertir?</summary>
-          <p>Desde $100.000 puedes comenzar a invertir en nuestros fondos.</p>
-        </details>
-        <details>
-          <summary>¿Puedo retirar mi inversión en cualquier momento?</summary>
-          <p>Sí, aunque algunos productos tienen plazos mínimos recomendados para obtener mejor rentabilidad.</p>
-        </details>
-        <details>
-          <summary>¿Es seguro invertir con ustedes?</summary>
-          <p>Contamos con asesoría profesional, análisis de riesgo y respaldo de instituciones financieras.</p>
-        </details>
-        <details>
-          <summary>¿Cómo sé cuál inversión es mejor para mí?</summary>
-          <p>Te ayudamos a definir tu perfil de riesgo y objetivos para elegir el portafolio más adecuado.</p>
-        </details>
+        <details><summary>¿Cómo invertir en InviertoOk?</summary><p>Regístrate, abona saldo, elige una oportunidad y confirma con tu saldo disponible.</p></details>
+        <details><summary>¿Por qué elegir InviertoOk?</summary><p>Rentabilidad, propósito colaborativo, mora e interés, y respaldo a pymes.</p></details>
+        <details><summary>¿Hay un monto mínimo?</summary><p>Sí, desde $100.000.</p></details>
+        <details><summary>¿Qué formas de pago aceptan?</summary><p>Khipu y transferencias bancarias.</p></details>
+        <details><summary>¿Cómo recupero mi inversión?</summary><p>Se abona capital más rentabilidad al vencimiento, con pagos según horarios.</p></details>
+        <details><summary>¿Es seguro invertir?</summary><p>Hay riesgo. Default histórico: 0,44%. Diversifica para reducir riesgos.</p></details>
+        <details><summary>¿Requisitos para invertir?</summary><p>Mayor de 18 años, RUT y cuenta bancaria chilena.</p></details>
+        <details><summary>¿Puedo invertir con empresa?</summary><p>Sí, registrando empresa con documentos.</p></details>
+        <details><summary>¿Cómo calculo utilidades?</summary><p>Simula en el sitio una vez logueado.</p></details>
+        <details><summary>¿Qué costos existen?</summary><p>Comisión InviertoOk y costo por uso de plataforma.</p></details>
+        <details><summary>¿Puedo simular una inversión?</summary><p>Sí, dentro del sitio luego de iniciar sesión.</p></details>
+        <details><summary>¿Diferencia entre crédito moroso e incobrable?</summary><p>Moroso: atrasado. Incobrable: no recuperado tras gestión judicial.</p></details>
+        <details><summary>¿Qué es la comisión InviertoOk?</summary><p>Costo al momento de invertir, según monto y plazo.</p></details>
+        <details><summary>¿Condiciones para empresas solicitantes?</summary><p>Evaluación financiera, antecedentes, comportamiento de pago y más.</p></details>
+        <details><summary>¿Qué es plazo normal?</summary><p>Hasta 30 días después del vencimiento.</p></details>
+        <details><summary>¿Qué es el saldo InviertoOk?</summary><p>Tu dinero para invertir o retirar.</p></details>
+        <details><summary>¿Cómo tener saldo disponible?</summary><p>Con abono o retorno de inversión.</p></details>
+        <details><summary>¿Debo abonar cada vez?</summary><p>No, puedes usar saldo o reinvertir.</p></details>
+        <details><summary>¿Monto máximo de saldo?</summary><p>Sin límite, pero abonos hasta $5 millones cada uno.</p></details>
+        <details><summary>¿De quién es el dinero del saldo?</summary><p>Es tuyo. Puedes invertirlo o retirarlo.</p></details>
+        <details><summary>Aboné por Khipu y no veo el monto</summary><p>Puede tardar unos minutos. Confirma por correo.</p></details>
+        <details><summary>Khipu no reconoce mi cuenta</summary><p>Haz una transferencia pequeña para activarla.</p></details>
+        <details><summary>¿Puede un tercero retirar mi saldo?</summary><p>No. Solo el titular de la cuenta puede hacerlo.</p></details>
       </div>
     </section>
   </main>
@@ -255,7 +178,8 @@
   <script>
     function mostrarSeccion(id, enlace) {
       document.querySelectorAll('main section').forEach(sec => sec.classList.remove('active'));
-      document.getElementById(id).classList.add('active');
+      const target = document.getElementById(id);
+      if (target) target.classList.add('active');
       document.querySelectorAll('nav a').forEach(a => a.classList.remove('active-tab'));
       if (enlace) enlace.classList.add('active-tab');
     }
