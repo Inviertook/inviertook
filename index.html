@@ -18,6 +18,20 @@
       padding: 20px;
       text-align: center;
     }
+    nav {
+      background-color: #155ab6;
+      text-align: center;
+      padding: 10px 0;
+    }
+    nav a {
+      color: white;
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    nav a:hover {
+      text-decoration: underline;
+    }
     main {
       padding: 40px;
       text-align: center;
@@ -88,27 +102,127 @@
     button:hover {
       background-color: #155ab6;
     }
+    table {
+      width: 100%;
+      max-width: 800px;
+      margin: 20px auto;
+      border-collapse: collapse;
+      background-color: white;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    }
+    th, td {
+      padding: 12px;
+      border: 1px solid #ccc;
+      text-align: left;
+    }
+    th {
+      background-color: #1a73e8;
+      color: white;
+    }
+    .highlight-low {
+      background-color: #e0f7fa;
+    }
+    .highlight-medium {
+      background-color: #fff3e0;
+    }
+    .highlight-high {
+      background-color: #fdecea;
+    }
   </style>
 </head>
 <body>
   <header>
     <h1>inviertook</h1>
   </header>
+
+  <nav>
+    <a href="#nosotros">Nosotros</a>
+    <a href="#servicios">Servicios</a>
+    <a href="#productos">Productos</a>
+    <a href="#inversiones">Inversiones</a>
+    <a href="#contacto">Contacto</a>
+    <a href="#formulario">Formulario</a>
+    <a href="#ayuda">Ayuda</a>
+  </nav>
+
   <main>
     <p>Bienvenido a nuestro sitio web corporativo. Aquí encontrarás información sobre nuestros servicios e inversiones.</p>
 
-    <section>
+    <section id="nosotros">
+      <h2>Nosotros</h2>
+      <p>Somos un equipo multidisciplinario de profesionales con experiencia en asesoría financiera, inversiones y desarrollo de proyectos. Nuestra misión es ayudarte a tomar decisiones informadas y seguras para alcanzar tus objetivos financieros.</p>
+    </section>
+
+    <section id="servicios">
       <h2>Servicios</h2>
       <p>Asesoría financiera, planificación de inversiones, y acompañamiento personalizado.</p>
     </section>
 
-    <section>
+    <section id="productos">
+      <h2>Productos</h2>
+      <p>Ofrecemos una variedad de productos financieros adaptados a tus necesidades:</p>
+      <ul>
+        <li>🔒 Cuentas de ahorro con rentabilidad asegurada</li>
+        <li>💳 Tarjetas de inversión prepago</li>
+        <li>🏦 Planes de retiro y pensión</li>
+        <li>📘 Guías y recursos para inversionistas principiantes</li>
+      </ul>
+    </section>
+
+    <section id="inversiones">
+      <h2>Inversiones</h2>
+      <p>Descubre nuestras oportunidades de inversión: fondos mutuos, bienes raíces, renta fija y portafolios personalizados según tu perfil de riesgo.</p>
+
+      <table>
+        <thead>
+          <tr>
+            <th>Tipo de Inversión</th>
+            <th>Rentabilidad Estimada</th>
+            <th>Riesgo</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="highlight-medium">
+            <td>Fondos Mutuos</td>
+            <td>6% anual</td>
+            <td>Moderado</td>
+          </tr>
+          <tr class="highlight-low">
+            <td>Bienes Raíces</td>
+            <td>5-8% anual</td>
+            <td>Bajo a Moderado</td>
+          </tr>
+          <tr class="highlight-low">
+            <td>Renta Fija</td>
+            <td>4% anual</td>
+            <td>Bajo</td>
+          </tr>
+          <tr class="highlight-high">
+            <td>Portafolio Personalizado</td>
+            <td>8-12% anual</td>
+            <td>Variable (según perfil)</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h3>Oportunidades de Inversión</h3>
+      <p>Actualmente contamos con proyectos abiertos en:</p>
+      <ul>
+        <li>🏢 Desarrollo inmobiliario en Santiago centro</li>
+        <li>🌱 Fondo verde de inversión en energías renovables</li>
+        <li>💼 Renta fija con garantía estatal (bonos)</li>
+        <li>📈 Startups tecnológicas con alto potencial</li>
+      </ul>
+      <p>Contáctanos para más información o una asesoría personalizada según tu perfil.</p>
+    </section>
+
+    <section id="contacto">
       <h2>Contacto</h2>
       <p>¿Tienes dudas o quieres hablar con nosotros? Escríbenos directamente.</p>
       <a class="whatsapp-button" href="https://wa.me/56997245817" target="_blank">Hablar por WhatsApp</a>
     </section>
 
-    <section>
+    <section id="formulario">
       <h2>Formulario de Contacto</h2>
       <form action="https://formsubmit.co/inviertoook@gmail.com" method="post">
         <input type="hidden" name="_captcha" value="false">
@@ -126,7 +240,13 @@
         <button type="submit">Enviar</button>
       </form>
     </section>
+
+    <section id="ayuda">
+      <h2>Ayuda</h2>
+      <p>Para soporte o preguntas frecuentes, contáctanos por WhatsApp o a través del formulario. Responderemos a la brevedad.</p>
+    </section>
   </main>
+
   <footer>
     &copy; 2024 inviertook. Todos los derechos reservados.
   </footer>
