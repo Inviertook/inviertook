@@ -89,13 +89,14 @@
   </header>
 
   <nav>
-    <a onclick="mostrarSeccion('nosotros', this)" class="active-tab">Nosotros</a>
-    <a onclick="mostrarSeccion('servicios', this)">Servicios</a>
     <a onclick="mostrarSeccion('productos', this)">Productos</a>
     <a onclick="mostrarSeccion('inversiones', this)">Inversiones</a>
+    <a onclick="mostrarSeccion('nosotros', this)" class="active-tab">Nosotros</a>
+    <a onclick="mostrarSeccion('ayuda', this)">Ayuda</a>
+    <a onclick="mostrarSeccion('servicios', this)">Servicios</a>
     <a onclick="mostrarSeccion('contacto', this)">Contacto</a>
     <a onclick="mostrarSeccion('formulario', this)">Formulario</a>
-    <a onclick="mostrarSeccion('ayuda', this)">Ayuda</a>
+    
   </nav>
 
   <main>
@@ -123,8 +124,10 @@
       <h2>Contacto</h2>
       <p>¿Tienes dudas? Escríbenos directamente.</p>
     </section>
-
-    <section id="formulario">
+        
+    </section id="ayuda">
+      <h2>Ayuda</h2>
+      <p>Para soporte, contáctanos vía WhatsApp o formulario.</p>
       <h2>Formulario de Contacto</h2>
       <form action="https://formsubmit.co/inviertoook@gmail.com" method="post">
         <input type="hidden" name="_captcha" value="false">
@@ -133,11 +136,6 @@
         <label>Mensaje:<textarea name="mensaje" rows="4" required></textarea></label>
         <button type="submit">Enviar</button>
       </form>
-    </section>
-
-    <section id="ayuda">
-      <h2>Ayuda</h2>
-      <p>Para soporte, contáctanos vía WhatsApp o formulario.</p>
     </section>
 
     <section id="inversiones">
