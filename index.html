@@ -4,5 +4,154 @@
 <head>
   <meta charset="UTF-8">
   <title>inviertook</title>
-  ...
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f5f7fa;
+      color: #2c3e50;
+      margin: 0;
+      padding: 0;
+      scroll-behavior: smooth;
+    }
+    header {
+      background-color: #1a73e8;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+    nav {
+      background-color: #155ab6;
+      text-align: center;
+      padding: 10px 0;
+    }
+    nav a {
+      color: white;
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: bold;
+      cursor: pointer;
+    }
+    nav a.active-tab {
+      text-decoration: underline;
+      border-bottom: 2px solid white;
+    }
+    nav a:hover {
+      text-decoration: underline;
+    }
+    main {
+      padding: 40px;
+      text-align: center;
+    }
+    section {
+      display: none;
+      margin-top: 40px;
+      opacity: 0;
+      transition: opacity 0.4s ease;
+    }
+    section.active {
+      display: block;
+      opacity: 1;
+    }
+    footer {
+      background-color: #1a73e8;
+      color: white;
+      text-align: center;
+      padding: 10px;
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>inviertook</h1>
+  </header>
+
+  <nav>
+    <a onclick="mostrarSeccion('productos', this)" class="active-tab">Productos</a>
+    <a onclick="mostrarSeccion('inversiones', this)">Inversiones</a>
+    <a onclick="mostrarSeccion('nosotros', this)">Nosotros</a>
+    <a onclick="mostrarSeccion('ayuda', this)">Ayuda</a>
+  </nav>
+
+  <main>
+    <section id="productos" class="active">
+      <h2>Productos</h2>
+      <p>InviertoOk ofrece soluciones de inversión específicamente diseñadas para corporativos que desean maximizar el uso de su capital de forma segura y rentable.</p>
+      <ul style="max-width: 800px; margin: auto; text-align: left">
+        <li>🏦 Gestión de portafolios de inversión para corporativos.</li>
+        <li>📈 Acceso a oportunidades exclusivas de financiamiento a pymes.</li>
+        <li>📄 Reportes personalizados de rendimiento y riesgo.</li>
+        <li>🤝 Asesoría especializada y soporte prioritario.</li>
+        <li>💼 Plataforma multiempresa para control de inversiones por razón social.</li>
+      </ul>
+    </section>
+
+    <section id="inversiones">
+      <h2>Inversiones</h2>
+      <p>Descubre nuestras oportunidades de inversión, con alternativas en renta fija y respaldo a pymes.</p>
+      <div class="faq" style="text-align:left; max-width:800px; margin:auto">
+        <details><summary>¿Cómo invertir en InviertoOk?</summary><p>Regístrate, abona saldo, elige una oportunidad y confirma con tu saldo disponible.</p></details>
+        <details><summary>¿Por qué elegir a InviertoOk?</summary><p>Rentabilidad, propósito colaborativo, mora e interés, y respaldo a pymes.</p></details>
+        <details><summary>¿Hay un monto mínimo para invertir?</summary><p>Sí, desde $100.000.</p></details>
+        <details><summary>¿Qué formas de pago aceptan?</summary><p>Khipu y transferencias bancarias.</p></details>
+        <details><summary>¿Cómo y cuándo recupero mi inversión?</summary><p>Se abona capital más rentabilidad al vencimiento, con pagos según horarios.</p></details>
+        <details><summary>¿Es seguro invertir?</summary><p>Hay riesgo. Default histórico: 0,44%. Diversifica para reducir riesgos.</p></details>
+        <details><summary>¿Cuáles son los requisitos para invertir?</summary><p>Mayor de 18 años, RUT y cuenta bancaria chilena.</p></details>
+        <details><summary>¿Puedo invertir con una cuenta de empresa?</summary><p>Sí, registrando tu empresa con documentos legales.</p></details>
+        <details><summary>¿Cómo puedo calcular mis utilidades?</summary><p>Simulaciones disponibles dentro del sitio.</p></details>
+        <details><summary>¿Qué costos existen para invertir?</summary><p>Comisión InviertoOk y costo por uso de plataforma.</p></details>
+        <details><summary>¿Puedo hacer una simulación antes de invertir?</summary><p>Sí, desde el detalle de la inversión iniciando sesión.</p></details>
+        <details><summary>¿Qué diferencia hay entre crédito moroso e incobrable?</summary><p>Moroso: pago atrasado. Incobrable: ya no se puede recuperar legalmente.</p></details>
+        <details><summary>¿Qué es la comisión InviertoOk?</summary><p>Costo que se paga al momento de invertir, varía según monto y plazo.</p></details>
+        <details><summary>¿Qué condiciones deben cumplir las empresas solicitantes?</summary><p>Evaluación financiera, antecedentes comerciales, comportamiento de pago, historial.</p></details>
+        <details><summary>¿Qué significa que el pago fue en plazo normal?</summary><p>Hasta 30 días después del vencimiento se considera dentro de plazo normal.</p></details>
+        <details><summary>¿Qué es el saldo InviertoOk?</summary><p>Es tu dinero disponible para invertir o retirar.</p></details>
+        <details><summary>¿Cómo obtengo saldo disponible?</summary><p>Abonando dinero o recibiendo retornos de inversiones.</p></details>
+        <details><summary>¿Debo abonar cada vez que quiera invertir?</summary><p>No. Puedes usar saldo ya disponible o reinvertir retornos.</p></details>
+        <details><summary>¿Hay un monto máximo para el saldo?</summary><p>No hay límite total. Cada abono debe ser hasta $5.000.000.</p></details>
+        <details><summary>¿De quién es el dinero en mi saldo?</summary><p>Es 100% tuyo. Tú decides si invertirlo o retirarlo.</p></details>
+        <details><summary>Aboné por Khipu y no veo el monto</summary><p>Pueden pasar unos minutos. Se confirma por correo.</p></details>
+        <details><summary>Khipu no reconoce mi cuenta bancaria</summary><p>Haz una transferencia pequeña o usa una cuenta registrada anteriormente.</p></details>
+        <details><summary>¿Puede un tercero retirar mi saldo?</summary><p>No. Solo el titular puede solicitar el retiro.</p></details>
+        <details><summary>¿Qué beneficios tiene InviertoOk frente a otras plataformas?</summary><p>Red de pymes chilenas, transparencia, asesoría y rentabilidad con respaldo.</p></details>
+        <details><summary>¿Qué pasa si una empresa no paga?</summary><p>Se aplican intereses moratorios y se inicia gestión de cobranza.</p></details>
+      </div>
+    </section>
+
+    <section id="nosotros">
+      <h2>Nosotros</h2>
+      <p>Somos una plataforma que conecta inversionistas con pymes que buscan financiamiento. Apostamos por un modelo colaborativo y seguro.</p>
+    </section>
+
+    <section id="ayuda">
+      <h2>Ayuda</h2>
+      <p>Para soporte, contáctanos vía WhatsApp o a través del siguiente formulario:</p>
+      <a class="whatsapp-button" href="https://wa.me/56997245817" target="_blank" style="display:inline-block;padding:10px 20px;background:#25d366;color:white;border-radius:5px;text-decoration:none;margin-bottom:20px;font-weight:bold;">💬 Escríbenos por WhatsApp</a>
+      <form action="https://formsubmit.co/inviertoook@gmail.com" method="post">
+        <input type="hidden" name="_captcha" value="false">
+        <label>Nombre:<input type="text" name="nombre" required></label>
+        <label>Email:<input type="email" name="email" required></label>
+        <label>Mensaje:<textarea name="mensaje" rows="4" required></textarea></label>
+        <button type="submit">Enviar mensaje</button>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    &copy; 2024 inviertook. Todos los derechos reservados. <br>
+    <a class="whatsapp-button" href="https://wa.me/56997245817" target="_blank" style="display:inline-block;margin-top:10px;padding:5px 10px;background:#25d366;color:white;border-radius:5px;text-decoration:none;font-weight:bold;">WhatsApp</a>
+  </footer>
+
+  <script>
+    function mostrarSeccion(id, enlace) {
+      document.querySelectorAll('main section').forEach(sec => sec.classList.remove('active'));
+      const target = document.getElementById(id);
+      if (target) target.classList.add('active');
+      document.querySelectorAll('nav a').forEach(a => a.classList.remove('active-tab'));
+      if (enlace) enlace.classList.add('active-tab');
+    }
+  </script>
+</body>
 </html>
