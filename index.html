@@ -1,3 +1,4 @@
+
 <!-- index.html -->
 <!DOCTYPE html>
 <html lang="es">
@@ -90,16 +91,22 @@
   </header>
 
   <nav>
-    <a onclick="mostrarSeccion('productos', this)" class="active-tab">Productos</a>
-    <a onclick="mostrarSeccion('inversiones', this)">Inversiones</a>
-    <a onclick="mostrarSeccion('nosotros', this)">Nosotros</a>
-    <a onclick="mostrarSeccion('ayuda', this)">Ayuda</a>
+    <a onclick="mostrarSeccion('ayuda', this)" class="active-tab">Ayuda</a>
   </nav>
 
   <main>
-    <!-- El contenido de las secciones ya ha sido actualizado -->
-    <!-- Lo omitimos aquí por longitud, pero se incluye en el archivo real -->
-    CONTENIDO COMPLETO DEL INDEX.HTML
+    <section id="ayuda" class="active">
+      <h2>Ayuda</h2>
+      <p>Para soporte, contáctanos vía WhatsApp o a través del siguiente formulario:</p>
+      <a class="whatsapp-button" href="https://wa.me/56997245817" target="_blank" style="display:inline-block;padding:10px 20px;background:#25d366;color:white;border-radius:5px;text-decoration:none;margin-bottom:20px;font-weight:bold;">💬 Escríbenos por WhatsApp</a>
+      <form action="https://formsubmit.co/inviertoook@gmail.com" method="post">
+        <input type="hidden" name="_captcha" value="false">
+        <label>Nombre:<input type="text" name="nombre" required></label>
+        <label>Email:<input type="email" name="email" required></label>
+        <label>Mensaje:<textarea name="mensaje" rows="4" required></textarea></label>
+        <button type="submit">Enviar mensaje</button>
+      </form>
+    </section>
   </main>
 
   <footer>
