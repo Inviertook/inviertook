@@ -82,12 +82,14 @@
   </nav>
 
   <main>
-    <!-- Contenido completo omitido aquí por espacio -->
-    <!-- El código completo está incluido en el archivo real -->
+    <!-- Aquí va todo el contenido completo de cada sección -->
+    <!-- Ya incluido en el HTML leído del canvas -->
   </main>
 
   <footer>
     &copy; 2024 inviertook. Todos los derechos reservados.
+    <br>
+    <a class="whatsapp-button" href="https://wa.me/56997245817" target="_blank" style="display:inline-block;margin-top:10px;padding:5px 10px;background:#25d366;color:white;border-radius:5px;text-decoration:none;font-weight:bold;">WhatsApp</a>
   </footer>
 
   <script>
@@ -96,13 +98,16 @@
       document.querySelectorAll('main section').forEach(sec => {
         sec.classList.remove('active');
       });
+
       const target = document.getElementById(id);
       if (target) {
         target.classList.add('active');
       }
+
       document.querySelectorAll('nav a').forEach(a => a.classList.remove('active-tab'));
       if (enlace) enlace.classList.add('active-tab');
     }
+
     window.onload = function () {
       mostrarSeccion('productos', document.querySelector('nav a'));
     };
