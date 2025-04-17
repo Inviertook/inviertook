@@ -1,0 +1,110 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>inviertook</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f5f7fa;
+      color: #2c3e50;
+      margin: 0;
+      padding: 0;
+      scroll-behavior: smooth;
+    }
+    header {
+      background-color: #1a73e8;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+    nav {
+      background-color: #155ab6;
+      text-align: center;
+      padding: 10px 0;
+    }
+    nav a {
+      color: white;
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: bold;
+      cursor: pointer;
+    }
+    nav a.active-tab {
+      text-decoration: underline;
+      border-bottom: 2px solid white;
+    }
+    nav a:hover {
+      text-decoration: underline;
+    }
+    main {
+      padding: 40px;
+      text-align: center;
+    }
+    section {
+      display: none;
+      margin-top: 40px;
+      opacity: 0;
+      transition: opacity 0.4s ease;
+    }
+    section.active {
+      display: block;
+      opacity: 1;
+    }
+    footer {
+      background-color: #1a73e8;
+      color: white;
+      text-align: center;
+      padding: 10px;
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>inviertook</h1>
+  </header>
+
+  <nav>
+    <a onclick="mostrarSeccion('productos', this)" class="active-tab">Productos</a>
+    <a onclick="mostrarSeccion('inversiones', this)">Inversiones</a>
+    <a onclick="mostrarSeccion('nosotros', this)">Nosotros</a>
+    <a onclick="mostrarSeccion('ayuda', this)">Ayuda</a>
+  </nav>
+
+  <main>
+    <section id="productos" class="active">
+  <h2>Productos</h2>
+  <p>Conoce nuestras soluciones diseñadas específicamente para empresas y clientes corporativos.</p>
+  <h3>Para empresa</h3>
+<ul style="max-width: 800px; margin: auto; text-align: left">
+  <li>💼 Plataforma simple para pequeñas y medianas empresas.</li>
+  <li>⚙️ Acceso rápido a oportunidades de financiamiento.</li>
+  <li>📊 Reportes básicos de inversión.</li>
+  <li>🤝 Asistencia operativa para comenzar a invertir.</li>
+</ul>
+
+<h3>Corporativo</h3>
+<ul style="max-width: 800px; margin: auto; text-align: left">
+  <li>📊 Soluciones a medida para grandes portafolios.</li>
+  <li>🔐 Seguridad avanzada y cumplimiento normativo.</li>
+  <li>📈 Reportes financieros integrados para departamentos contables.</li>
+  <li>🤝 Ejecutivos de cuenta y asesoría estratégica.</li>
+  <li>🌐 Acceso prioritario a oportunidades de inversión exclusivas.</li>
+</ul>
+</section>
+<!-- contenido recortado por brevedad -->
+<script>
+  function mostrarSeccion(id, enlace) {
+    document.querySelectorAll('main section').forEach(sec => sec.classList.remove('active'));
+    const target = document.getElementById(id);
+    if (target) target.classList.add('active');
+    document.querySelectorAll('nav a').forEach(a => a.classList.remove('active-tab'));
+    if (enlace) enlace.classList.add('active-tab');
+  }
+</script>
+</body>
+</html>
