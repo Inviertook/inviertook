@@ -1,0 +1,106 @@
+<!-- index.html -->
+<!DOCTYPE html>
+
+<html lang="es">
+<head>
+<link href="https://cdn-icons-png.flaticon.com/512/3211/3211738.png" rel="icon" type="image/png"/>
+<meta charset="utf-8"/>
+<title>inviertook</title>
+<style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f5f7fa;
+      color: #2c3e50;
+      margin: 0;
+      padding: 0;
+      scroll-behavior: smooth;
+    }
+    header {
+      background-color: #1a73e8;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+    nav {
+      background-color: #155ab6;
+      text-align: center;
+      padding: 10px 0;
+    }
+    nav a {
+      color: white;
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: bold;
+      cursor: pointer;
+    }
+    nav a.active-tab {
+      text-decoration: underline;
+      border-bottom: 2px solid white;
+    }
+    nav a:hover {
+      text-decoration: underline;
+    }
+    main {
+      padding: 40px;
+      text-align: center;
+    }
+    section {
+      display: none;
+    }
+    section.active {
+      display: block;
+    }
+    footer {
+      background-color: #1a73e8;
+      color: white;
+      text-align: center;
+      padding: 10px;
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+    }
+    .productos { background-color: #e3f2fd; padding: 20px; }
+    .inversiones { background-color: #fff3e0; padding: 20px; min-height: 600px; overflow-y: auto; }
+    .nosotros { background-color: #e8f5e9; padding: 20px; }
+    .ayuda { background-color: #fce4ec; padding: 20px; }
+  </style>
+</head>
+<body>
+<header>
+<h1>inviertook 🚀</h1>
+</header>
+<nav>
+<a class="active-tab" onclick="mostrarSeccion('productos', this)">Productos</a>
+<a onclick="mostrarSeccion('inversiones', this)">Inversiones</a>
+<a onclick="mostrarSeccion('nosotros', this)">Nosotros</a>
+<a onclick="mostrarSeccion('ayuda', this)">Ayuda</a>
+</nav>
+<main>
+<section class="active productos" id="productos"><h2>Productos</h2><p>Soluciones diseñadas para:</p><ul><li>✅ <strong>Para empresa</strong></li><li>✅ <strong>Corporativos</strong></li></ul></section>
+<section class="inversiones" id="inversiones"><h2>Inversiones</h2><p>Contenido de inversiones</p></section>
+<section class="nosotros" id="nosotros"><h2>Nosotros</h2><p>Contenido de nosotros</p></section>
+<section class="ayuda" id="ayuda"><h2>Ayuda</h2><p>Contenido de ayuda</p></section>
+</main>
+<footer>
+    © 2024 inviertook. Todos los derechos reservados. <br/>
+<a class="whatsapp-button" href="https://wa.me/56997245817" style="display:inline-block;margin-top:10px;padding:5px 10px;background:#25d366;color:white;border-radius:5px;text-decoration:none;font-weight:bold;" target="_blank">WhatsApp</a>
+</footer>
+<script>
+function mostrarSeccion(id, enlace) {
+  console.log("Mostrando:", id);
+  document.querySelectorAll('main section').forEach(sec => {
+    sec.classList.remove('active');
+  });
+  const target = document.getElementById(id);
+  if (target) {
+    target.classList.add('active');
+  }
+  document.querySelectorAll('nav a').forEach(a => a.classList.remove('active-tab'));
+  if (enlace) enlace.classList.add('active-tab');
+}
+window.onload = function () {
+  mostrarSeccion('productos', document.querySelector('nav a'));
+};
+</script>
+</body>
+</html>
