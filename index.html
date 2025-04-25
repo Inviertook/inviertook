@@ -1,12 +1,9 @@
-<!-- index.html -->
 <!DOCTYPE html>
-
 <html lang="es">
 <head>
-<link href="https://cdn-icons-png.flaticon.com/512/3211/3211738.png" rel="icon" type="image/png"/>
-<meta charset="utf-8"/>
-<title>inviertook</title>
-<style>
+  <meta charset="UTF-8">
+  <title>inviertook</title>
+  <style>
     body {
       font-family: Arial, sans-serif;
       background-color: #f5f7fa;
@@ -43,6 +40,7 @@
     main {
       padding: 40px;
       text-align: center;
+      margin-bottom: 120px;
     }
     section {
       display: none;
@@ -60,74 +58,57 @@
       width: 100%;
     }
     .productos { background-color: #e3f2fd; padding: 20px; }
-    .inversiones { background-color: #fff3e0; padding: 20px; min-height: 600px; overflow-y: auto; }
+    .inversiones { background-color: #fff3e0; padding: 20px; }
     .nosotros { background-color: #e8f5e9; padding: 20px; }
     .ayuda { background-color: #fce4ec; padding: 20px; }
-  
-form {
-  max-width: 500px;
-  margin: 20px auto;
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  text-align: left;
-}
-form label {
-  font-weight: bold;
-}
-form input,
-form textarea {
-  padding: 8px;
-  border: 1px solid #ccc;
-  border-radius: 6px;
-}
-form button {
-  padding: 10px;
-  background-color: #1a73e8;
-  color: white;
-  border: none;
-  border-radius: 6px;
-  font-weight: bold;
-  cursor: pointer;
-}
-</style>
+  </style>
 </head>
 <body>
-<header>
-<h1>inviertook 🚀</h1>
-</header>
-<nav>
-<a class="active-tab" onclick="mostrarSeccion('productos', this)">Productos</a>
-<a onclick="mostrarSeccion('inversiones', this)">Inversiones</a>
-<a onclick="mostrarSeccion('nosotros', this)">Nosotros</a>
-<a onclick="mostrarSeccion('ayuda', this)">Ayuda</a>
-</nav>
-<main>
-<section class="active productos" id="productos"><h2>Productos</h2><p>Soluciones diseñadas para:</p><ul><li>✅ <strong>Para empresa</strong></li><li>✅ <strong>Corporativos</strong></li></ul></section>
-<section class="inversiones" id="inversiones"><h2>Inversiones</h2><p>Contenido de inversiones</p></section>
-<section class="nosotros" id="nosotros"><h2>Nosotros</h2><p>Contenido de nosotros</p></section>
-<section class="ayuda" id="ayuda"><h2>Ayuda</h2><p>Contenido de ayuda</p></section>
-</main>
-<footer>
-    © 2024 inviertook. Todos los derechos reservados. <br/>
-<a class="whatsapp-button" href="https://wa.me/56997245817" style="display:inline-block;margin-top:10px;padding:5px 10px;background:#25d366;color:white;border-radius:5px;text-decoration:none;font-weight:bold;" target="_blank">WhatsApp</a>
-</footer>
-<script>
-function mostrarSeccion(id, enlace) {
-  console.log("Mostrando:", id);
-  document.querySelectorAll('main section').forEach(sec => {
-    sec.classList.remove('active');
-  });
-  const target = document.getElementById(id);
-  if (target) {
-    target.classList.add('active');
-  }
-  document.querySelectorAll('nav a').forEach(a => a.classList.remove('active-tab'));
-  if (enlace) enlace.classList.add('active-tab');
-}
-window.onload = function () {
-  mostrarSeccion('productos', document.querySelector('nav a'));
-};
-</script>
+  <header>
+    <h1>inviertook 🚀</h1>
+  </header>
+  <nav>
+    <a onclick="mostrarSeccion('productos', this)" class="active-tab">Productos</a>
+    <a onclick="mostrarSeccion('inversiones', this)">Inversiones</a>
+    <a onclick="mostrarSeccion('nosotros', this)">Nosotros</a>
+    <a onclick="mostrarSeccion('ayuda', this)">Ayuda</a>
+  </nav>
+  <main>
+    <section id="productos" class="productos active">
+      <h2>Productos</h2>
+      <p>Contenido de productos para empresas y corporativos.</p>
+    </section>
+    <section id="inversiones" class="inversiones">
+      <h2>Inversiones</h2>
+      <p>Contenido de inversiones y preguntas frecuentes.</p>
+    </section>
+    <section id="nosotros" class="nosotros">
+      <h2>Nosotros</h2>
+      <p>Contenido acerca de Inviertook.</p>
+    </section>
+    <section id="ayuda" class="ayuda">
+      <h2>Ayuda</h2>
+      <p>Formulario de contacto y soporte.</p>
+    </section>
+  </main>
+  <footer>
+    &copy; 2024 inviertook. Todos los derechos reservados.
+  </footer>
+  <script>
+    function mostrarSeccion(id, enlace) {
+      document.querySelectorAll('main section').forEach(sec => {
+        sec.classList.remove('active');
+      });
+      const target = document.getElementById(id);
+      if (target) {
+        target.classList.add('active');
+      }
+      document.querySelectorAll('nav a').forEach(a => a.classList.remove('active-tab'));
+      if (enlace) enlace.classList.add('active-tab');
+    }
+    window.onload = function () {
+      mostrarSeccion('productos', document.querySelector('nav a'));
+    };
+  </script>
 </body>
 </html>
