@@ -2,7 +2,7 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <title>inviertook</title>
+  <title>Inviertook 🚀</title>
   <style>
     body {
       font-family: Arial, sans-serif;
@@ -61,54 +61,116 @@
     .inversiones { background-color: #fff3e0; padding: 20px; }
     .nosotros { background-color: #e8f5e9; padding: 20px; }
     .ayuda { background-color: #fce4ec; padding: 20px; }
+    .faq details {
+      background: #ffffff;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      padding: 10px 15px;
+      margin-bottom: 12px;
+    }
+    .faq summary {
+      font-weight: bold;
+      cursor: pointer;
+    }
+    .faq p {
+      margin-top: 8px;
+    }
+    form {
+      max-width: 500px;
+      margin: 20px auto;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      text-align: left;
+    }
+    form label {
+      font-weight: bold;
+    }
+    form input,
+    form textarea {
+      padding: 8px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+    }
+    form button {
+      padding: 10px;
+      background-color: #1a73e8;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      font-weight: bold;
+      cursor: pointer;
+    }
   </style>
 </head>
 <body>
-  <header>
-    <h1>inviertook 🚀</h1>
-  </header>
-  <nav>
-    <a onclick="mostrarSeccion('productos', this)" class="active-tab">Productos</a>
-    <a onclick="mostrarSeccion('inversiones', this)">Inversiones</a>
-    <a onclick="mostrarSeccion('nosotros', this)">Nosotros</a>
-    <a onclick="mostrarSeccion('ayuda', this)">Ayuda</a>
-  </nav>
-  <main>
-    <section id="productos" class="productos active">
-      <h2>Productos</h2>
-      <p>Contenido de productos para empresas y corporativos.</p>
-    </section>
-    <section id="inversiones" class="inversiones">
-      <h2>Inversiones</h2>
-      <p>Contenido de inversiones y preguntas frecuentes.</p>
-    </section>
-    <section id="nosotros" class="nosotros">
-      <h2>Nosotros</h2>
-      <p>Contenido acerca de Inviertook.</p>
-    </section>
-    <section id="ayuda" class="ayuda">
-      <h2>Ayuda</h2>
-      <p>Formulario de contacto y soporte.</p>
-    </section>
-  </main>
-  <footer>
-    &copy; 2024 inviertook. Todos los derechos reservados.
-  </footer>
-  <script>
-    function mostrarSeccion(id, enlace) {
-      document.querySelectorAll('main section').forEach(sec => {
-        sec.classList.remove('active');
-      });
-      const target = document.getElementById(id);
-      if (target) {
-        target.classList.add('active');
-      }
-      document.querySelectorAll('nav a').forEach(a => a.classList.remove('active-tab'));
-      if (enlace) enlace.classList.add('active-tab');
-    }
-    window.onload = function () {
-      mostrarSeccion('productos', document.querySelector('nav a'));
-    };
-  </script>
+<header>
+  <h1>Inviertook 🚀</h1>
+</header>
+<nav>
+  <a onclick="mostrarSeccion('productos', this)" class="active-tab">Productos</a>
+  <a onclick="mostrarSeccion('inversiones', this)">Inversiones</a>
+  <a onclick="mostrarSeccion('nosotros', this)">Nosotros</a>
+  <a onclick="mostrarSeccion('ayuda', this)">Ayuda</a>
+</nav>
+<main>
+  <section id="productos" class="productos active">
+    <h2>Productos</h2>
+    <p>Ofrecemos soluciones de inversión para empresas y corporativos. ¡Haz crecer tu capital apoyando a pymes chilenas!</p>
+  </section>
+
+  <section id="inversiones" class="inversiones">
+    <h2>Inversiones</h2>
+    <div class="faq" style="text-align:left; max-width:800px; margin:auto">
+      <details><summary>¿Cómo invertir en Inviertook?</summary><p>Regístrate, abona saldo, elige una oportunidad y confirma con tu saldo disponible.</p></details>
+      <details><summary>¿Por qué elegir a Inviertook?</summary><p>Rentabilidad, propósito colaborativo, mora e interés, y respaldo a pymes.</p></details>
+      <details><summary>¿Hay un monto mínimo para invertir?</summary><p>Sí, desde $100.000.</p></details>
+      <details><summary>¿Qué formas de pago aceptan?</summary><p>Khipu y transferencias bancarias.</p></details>
+      <details><summary>¿Cómo y cuándo recupero mi inversión?</summary><p>Se abona capital más rentabilidad al vencimiento, con pagos según horarios.</p></details>
+      <details><summary>¿Es seguro invertir?</summary><p>Hay riesgo. Default histórico: 0,44%. Diversifica para reducir riesgos.</p></details>
+      <details><summary>¿Cuáles son los requisitos para invertir?</summary><p>Mayor de 18 años, RUT y cuenta bancaria chilena.</p></details>
+      <details><summary>¿Puedo invertir con una cuenta de empresa?</summary><p>Sí, registrando tu empresa con documentos legales.</p></details>
+      <details><summary>¿Cómo puedo calcular mis utilidades?</summary><p>Simulaciones disponibles dentro del sitio.</p></details>
+      <details><summary>¿Qué costos existen para invertir?</summary><p>Comisión Inviertook y costo por uso de plataforma.</p></details>
+    </div>
+  </section>
+
+  <section id="nosotros" class="nosotros">
+    <h2>Nosotros</h2>
+    <p>Buscamos resolver la desigualdad en el acceso a capital de las pequeñas y medianas empresas para acelerar su crecimiento. Conectamos inversionistas conscientes con empresas que impulsan el desarrollo económico.</p>
+  </section>
+
+  <section id="ayuda" class="ayuda">
+    <h2>Ayuda</h2>
+    <p>¿Tienes preguntas? Contáctanos a través del formulario o por WhatsApp:</p>
+    <a href="https://wa.me/56997245817" target="_blank" style="display:inline-block;margin:10px;padding:10px;background:#25d366;color:white;border-radius:6px;text-decoration:none;font-weight:bold;">💬 WhatsApp</a>
+    <form action="https://formsubmit.co/inviertoook@gmail.com" method="POST">
+      <input type="hidden" name="_captcha" value="false">
+      <label>Nombre:<input type="text" name="nombre" required></label>
+      <label>Email:<input type="email" name="email" required></label>
+      <label>Mensaje:<textarea name="mensaje" rows="4" required></textarea></label>
+      <button type="submit">Enviar mensaje</button>
+    </form>
+  </section>
+</main>
+<footer>
+  &copy; 2024 Inviertook. Todos los derechos reservados.
+</footer>
+<script>
+function mostrarSeccion(id, enlace) {
+  document.querySelectorAll('main section').forEach(sec => {
+    sec.classList.remove('active');
+  });
+  const target = document.getElementById(id);
+  if (target) {
+    target.classList.add('active');
+  }
+  document.querySelectorAll('nav a').forEach(a => a.classList.remove('active-tab'));
+  if (enlace) enlace.classList.add('active-tab');
+}
+window.onload = function () {
+  mostrarSeccion('productos', document.querySelector('nav a'));
+};
+</script>
 </body>
 </html>
