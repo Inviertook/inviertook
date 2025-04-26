@@ -15,7 +15,7 @@
     section.active { display: block; }
     footer { background-color: #1a73e8; color: white; text-align: center; padding: 10px; position: fixed; bottom: 0; width: 100%; }
     .productos { background-color: #e3f2fd; padding: 20px; }
-    .inversiones { background-color: #fff3e0; padding: 20px; }
+    .inversiones { background-color: #fff3e0; padding: 20px; max-height: 600px; overflow-y: scroll; }
     .nosotros { background-color: #e8f5e9; padding: 20px; }
     .ayuda { background-color: #fce4ec; padding: 20px; }
     .faq details { background: #ffffff; border: 1px solid #ccc; border-radius: 6px; padding: 10px 15px; margin-bottom: 12px; }
@@ -43,30 +43,55 @@
 <section id="inversiones" class="inversiones">
   <h2>Inversiones</h2>
   <div class="faq" style="text-align:left; max-width:800px; margin:auto">
-    <details><summary>¿Cómo invertir en Inviertook?</summary><p>Regístrate, abona saldo, elige una oportunidad y confirma.</p></details>
-    <details><summary>¿Por qué elegir a Inviertook?</summary><p>Rentabilidad en renta fija a corto plazo y respaldo de pymes.</p></details>
-    <details><summary>¿Hay un monto mínimo para invertir?</summary><p>Sí, desde $100.000.</p></details>
-    <details><summary>¿Qué formas de pago aceptan?</summary><p>Khipu y transferencias bancarias.</p></details>
-    <details><summary>¿Cómo y cuándo recupero mi inversión?</summary><p>Al vencimiento del crédito, abonando capital e intereses.</p></details>
-    <details><summary>¿Es seguro invertir?</summary><p>Siempre existe riesgo, aunque diversificamos y gestionamos moras.</p></details>
-    <details><summary>¿Cuáles son los requisitos para invertir?</summary><p>Mayor de 18 años, RUT y cuenta bancaria chilena.</p></details>
-    <details><summary>¿Puedo invertir como empresa?</summary><p>Sí, registrando tu empresa desde tu cuenta personal.</p></details>
-    <details><summary>¿Cómo calculo mis utilidades?</summary><p>Simulador de inversión disponible en cada oportunidad.</p></details>
-    <details><summary>¿Qué costos existen?</summary><p>Comisión Inviertook y costo de plataforma.</p></details>
-    <details><summary>¿Puedo hacer una simulación antes de invertir?</summary><p>Sí, en cada ficha de inversión disponible.</p></details>
-    <details><summary>¿Qué pasa si el solicitante no paga?</summary><p>Aplicamos intereses moratorios y cobranzas.</p></details>
-    <details><summary>¿Qué es la comisión Inviertook?</summary><p>Es el costo por usar nuestra plataforma para invertir.</p></details>
-    <details><summary>¿Qué condiciones deben cumplir las empresas solicitantes?</summary><p>Evaluación financiera, antecedentes comerciales y comportamiento de pago.</p></details>
-    <details><summary>¿Qué significa que el pago fue en plazo normal?</summary><p>Hasta 30 días después del vencimiento pactado.</p></details>
-    <details><summary>¿Qué es el saldo Inviertook?</summary><p>Es el saldo disponible que tienes en tu cuenta de inversionista.</p></details>
-    <details><summary>¿Cómo obtengo saldo disponible?</summary><p>Mediante abono por Khipu o transferencia bancaria.</p></details>
-    <details><summary>¿Debo abonar cada vez que quiero invertir?</summary><p>No, puedes invertir mientras tengas saldo disponible.</p></details>
-    <details><summary>¿Hay un monto máximo para tener saldo?</summary><p>No hay máximo, pero el abono diario está limitado a $5.000.000.</p></details>
-    <details><summary>¿De quién es el dinero en el saldo?</summary><p>Es tuyo. Puedes invertirlo o retirarlo.</p></details>
-    <details><summary>¿Qué hago si Khipu no reconoce mi banco?</summary><p>Realiza una transferencia bancaria manualmente.</p></details>
-    <details><summary>¿Puede un tercero retirar mi saldo?</summary><p>No, solo el titular de la cuenta puede hacerlo.</p></details>
-    <details><summary>¿Qué pasa si la empresa solicitante prepaga?</summary><p>Recibes tu capital y rentabilidad antes de la fecha pactada.</p></details>
-    <details><summary>¿Qué pasa si el crédito entra en mora?</summary><p>Ganas intereses moratorios y gestionamos el cobro.</p></details>
+
+<details><summary>¿Cómo invertir en Inviertook?</summary><p>Regístrate, abona saldo, elige una oportunidad y confirma con tu saldo disponible.</p></details>
+
+<details><summary>¿Por qué elegir a Inviertook?</summary><p>Rentabilidad, propósito colaborativo, mora e interés, y respaldo a pymes.</p></details>
+
+<details><summary>¿Hay un monto mínimo para invertir?</summary><p>Sí, desde $100.000.</p></details>
+
+<details><summary>¿Qué formas de pago aceptan?</summary><p>Khipu y transferencias bancarias.</p></details>
+
+<details><summary>¿Cómo y cuándo recupero mi inversión?</summary><p>Se abona capital más rentabilidad al vencimiento, con pagos según horarios.</p></details>
+
+<details><summary>¿Es seguro invertir?</summary><p>Hay riesgo. Default histórico: 0,44%. Diversificar ayuda a reducir riesgos.</p></details>
+
+<details><summary>¿Cuáles son los requisitos para invertir?</summary><p>Mayor de 18 años, RUT y cuenta bancaria chilena.</p></details>
+
+<details><summary>¿Puedo invertir con una cuenta de empresa?</summary><p>Sí, registrando tu empresa desde tu cuenta personal.</p></details>
+
+<details><summary>¿Cómo puedo calcular mis utilidades?</summary><p>Simulaciones disponibles dentro del sitio.</p></details>
+
+<details><summary>¿Qué costos existen para invertir?</summary><p>Comisión Inviertook y costo por uso de plataforma.</p></details>
+
+<details><summary>¿Puedo hacer una simulación antes de invertir?</summary><p>Sí, desde el detalle de la inversión iniciando sesión.</p></details>
+
+<details><summary>¿Qué diferencia hay entre crédito moroso e incobrable?</summary><p>Moroso: pago atrasado. Incobrable: ya no se puede recuperar legalmente.</p></details>
+
+<details><summary>¿Qué es la comisión Inviertook?</summary><p>Costo al momento de invertir, varía según monto y plazo.</p></details>
+
+<details><summary>¿Qué condiciones deben cumplir las empresas solicitantes?</summary><p>Evaluación financiera, antecedentes comerciales, comportamiento de pago.</p></details>
+
+<details><summary>¿Qué significa que el pago fue en plazo normal?</summary><p>Hasta 30 días después del vencimiento se considera dentro de plazo normal.</p></details>
+
+<details><summary>¿Qué es el saldo Inviertook?</summary><p>Tu dinero disponible para invertir o retirar.</p></details>
+
+<details><summary>¿Cómo obtengo saldo disponible?</summary><p>Abonando dinero o recibiendo retornos de inversiones.</p></details>
+
+<details><summary>¿Debo abonar cada vez que quiera invertir?</summary><p>No, puedes usar saldo ya disponible o reinvertir retornos.</p></details>
+
+<details><summary>¿Hay un monto máximo para el saldo?</summary><p>No hay límite total. Cada abono debe ser hasta $5.000.000.</p></details>
+
+<details><summary>¿De quién es el dinero en mi saldo?</summary><p>Es 100% tuyo. Tú decides si invertirlo o retirarlo.</p></details>
+
+<details><summary>¿Qué hago si Khipu no reconoce mi banco?</summary><p>Realiza una transferencia manual directa a la cuenta indicada.</p></details>
+
+<details><summary>¿Puede un tercero retirar mi saldo?</summary><p>No. Solo el titular de la cuenta puede solicitar el retiro.</p></details>
+
+<details><summary>¿Qué pasa si la empresa solicitante prepaga?</summary><p>Recibes capital más intereses anticipadamente.</p></details>
+
+<details><summary>¿Qué pasa si el crédito entra en mora?</summary><p>Ganas intereses moratorios y se gestiona el cobro.</p></details>
+
   </div>
 </section>
 <section id="nosotros" class="nosotros">
@@ -91,19 +116,13 @@
 </footer>
 <script>
 function mostrarSeccion(id, enlace) {
-  document.querySelectorAll('main section').forEach(sec => {
-    sec.classList.remove('active');
-  });
+  document.querySelectorAll('main section').forEach(sec => { sec.classList.remove('active'); });
   const target = document.getElementById(id);
-  if (target) {
-    target.classList.add('active');
-  }
+  if (target) { target.classList.add('active'); }
   document.querySelectorAll('nav a').forEach(a => a.classList.remove('active-tab'));
   if (enlace) enlace.classList.add('active-tab');
 }
-window.onload = function () {
-  mostrarSeccion('productos', document.querySelector('nav a'));
-};
+window.onload = function () { mostrarSeccion('productos', document.querySelector('nav a')); };
 </script>
 </body>
 </html>
