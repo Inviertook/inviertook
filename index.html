@@ -14,7 +14,7 @@
     section { display: none; }
     section.active { display: block; }
     footer { background-color: #1a73e8; color: white; text-align: center; padding: 10px; position: fixed; bottom: 0; width: 100%; }
-    .productos { background-color: #e3f2fd; padding: 20px; }
+    .financiamiento { background-color: #e3f2fd; padding: 20px; }
     .inversiones { background-color: #fff3e0; padding: 20px; max-height: 600px; overflow-y: scroll; }
     .nosotros { background-color: #e8f5e9; padding: 20px; }
     .ayuda { background-color: #fce4ec; padding: 20px; }
@@ -30,15 +30,18 @@
 <body>
 <header><h1>Inviertook 🚀</h1></header>
 <nav>
-  <a onclick="mostrarSeccion('productos', this)" class="active-tab">Productos</a>
+  <a onclick="mostrarSeccion('financiamiento', this)" class="active-tab">Financiamiento</a>
   <a onclick="mostrarSeccion('inversiones', this)">Inversiones</a>
   <a onclick="mostrarSeccion('nosotros', this)">Nosotros</a>
   <a onclick="mostrarSeccion('ayuda', this)">Ayuda</a>
 </nav>
 <main>
-<section id="productos" class="productos active">
-  <h2>Productos</h2>
-  <p>Ofrecemos soluciones de inversión para empresas y corporativos. ¡Haz crecer tu capital apoyando a pymes chilenas!</p>
+<section id="financiamiento" class="financiamiento active">
+  <h2>Financiamiento</h2>
+  <h3>Financiamiento para empresa</h3>
+  <p>Ofrecemos financiamiento para impulsar el crecimiento de pequeñas y medianas empresas (pymes).</p>
+  <h3>Financiamiento para corporativos</h3>
+  <p>Soluciones financieras personalizadas para empresas de mayor escala, adaptadas a sus necesidades de crecimiento.</p>
 </section>
 <section id="inversiones" class="inversiones">
   <h2>Inversiones</h2>
@@ -122,7 +125,7 @@ function mostrarSeccion(id, enlace) {
   document.querySelectorAll('nav a').forEach(a => a.classList.remove('active-tab'));
   if (enlace) enlace.classList.add('active-tab');
 }
-window.onload = function () { mostrarSeccion('productos', document.querySelector('nav a')); };
+window.onload = function () { mostrarSeccion('financiamiento', document.querySelector('nav a')); };
 </script>
 </body>
 </html>
