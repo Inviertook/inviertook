@@ -6,25 +6,21 @@
   <style>
     body { font-family: Arial, sans-serif; background-color: #f5f7fa; margin: 0; padding: 0; scroll-behavior: smooth; }
     header { background-color: #1a73e8; color: white; padding: 20px; text-align: center; }
-    nav { background-color: #155ab6; text-align: center; padding: 10px 0; }
+    nav { background-color: #155ab6; text-align: center; padding: 10px 0; display: flex; justify-content: center; align-items: center; }
     nav a { color: white; margin: 0 15px; text-decoration: none; font-weight: bold; cursor: pointer; }
     nav a.active-tab { text-decoration: underline; border-bottom: 2px solid white; }
     nav a:hover { text-decoration: underline; }
+    nav .spacer { flex-grow: 1; }
     main { padding: 40px; text-align: center; margin-bottom: 120px; }
     section { display: none; }
     section.active { display: block; }
     footer { background-color: #1a73e8; color: white; text-align: center; padding: 10px; position: fixed; bottom: 0; width: 100%; }
-    .financiamiento { background-color: #e3f2fd; padding: 20px; }
-    .inversiones { background-color: #fff3e0; padding: 20px; max-height: 600px; overflow-y: scroll; }
-    .nosotros { background-color: #e8f5e9; padding: 20px; }
-    .ayuda { background-color: #fce4ec; padding: 20px; }
-    .faq details { background: #ffffff; border: 1px solid #ccc; border-radius: 6px; padding: 10px 15px; margin-bottom: 12px; }
-    .faq summary { font-weight: bold; cursor: pointer; }
-    .faq p { margin-top: 8px; }
-    form { max-width: 500px; margin: 20px auto; display: flex; flex-direction: column; gap: 10px; text-align: left; }
-    form label { font-weight: bold; }
-    form input, form textarea { padding: 8px; border: 1px solid #ccc; border-radius: 6px; }
-    form button { padding: 10px; background-color: #1a73e8; color: white; border: none; border-radius: 6px; font-weight: bold; cursor: pointer; }
+    .formulario { background-color: #e8f5e9; padding: 20px; max-width: 400px; margin: auto; border-radius: 10px; box-shadow: 0 0 10px rgba(0,0,0,0.1); }
+    label { display: block; margin-top: 10px; font-weight: bold; text-align: left; }
+    input[type="email"], input[type="password"] { width: 100%; padding: 8px; margin-top: 5px; border: 1px solid #ccc; border-radius: 6px; }
+    .hidden { display: none; }
+    #crearCuenta { margin-top: 20px; padding: 10px; background: #1a73e8; color: white; border: none; border-radius: 6px; font-weight: bold; cursor: pointer; display: none; }
+    .checkbox { margin-top: 15px; text-align: left; }
   </style>
 </head>
 <body>
@@ -34,98 +30,106 @@
   <a onclick="mostrarSeccion('inversiones', this)">Inversiones</a>
   <a onclick="mostrarSeccion('nosotros', this)">Nosotros</a>
   <a onclick="mostrarSeccion('ayuda', this)">Ayuda</a>
+  <span class="spacer"></span>
+  <a onclick="mostrarIngreso()">Ingresar</a>
 </nav>
+
 <main>
 <section id="financiamiento" class="financiamiento active">
   <h2>Financiamiento</h2>
   <h3>Para empresa</h3>
   <p>Ofrecemos financiamiento para impulsar el crecimiento de pequeñas y medianas empresas (pymes).</p>
   <h3>Para corporativos</h3>
-  <p>Soluciones financieras personalizadas para empresas de mayor escala, adaptadas a sus necesidades de crecimiento.</p>
+  <p>Soluciones financieras personalizadas para empresas de mayor escala.</p>
 </section>
+
 <section id="inversiones" class="inversiones">
   <h2>Inversiones</h2>
-  <div class="faq" style="text-align:left; max-width:800px; margin:auto">
-
-<details><summary>¿Cómo invertir en Inviertook?</summary><p>Regístrate, abona saldo, elige una oportunidad y confirma con tu saldo disponible.</p></details>
-
-<details><summary>¿Por qué elegir a Inviertook?</summary><p>Rentabilidad, propósito colaborativo, mora e interés, y respaldo a pymes.</p></details>
-
-<details><summary>¿Hay un monto mínimo para invertir?</summary><p>Sí, desde $100.000.</p></details>
-
-<details><summary>¿Qué formas de pago aceptan?</summary><p>Khipu y transferencias bancarias.</p></details>
-
-<details><summary>¿Cómo y cuándo recupero mi inversión?</summary><p>Se abona capital más rentabilidad al vencimiento, con pagos según horarios.</p></details>
-
-<details><summary>¿Es seguro invertir?</summary><p>Hay riesgo. Default histórico: 0,44%. Diversificar ayuda a reducir riesgos.</p></details>
-
-<details><summary>¿Cuáles son los requisitos para invertir?</summary><p>Mayor de 18 años, RUT y cuenta bancaria chilena.</p></details>
-
-<details><summary>¿Puedo invertir con una cuenta de empresa?</summary><p>Sí, registrando tu empresa desde tu cuenta personal.</p></details>
-
-<details><summary>¿Cómo puedo calcular mis utilidades?</summary><p>Simulaciones disponibles dentro del sitio.</p></details>
-
-<details><summary>¿Qué costos existen para invertir?</summary><p>Comisión Inviertook y costo por uso de plataforma.</p></details>
-
-<details><summary>¿Puedo hacer una simulación antes de invertir?</summary><p>Sí, desde el detalle de la inversión iniciando sesión.</p></details>
-
-<details><summary>¿Qué diferencia hay entre crédito moroso e incobrable?</summary><p>Moroso: pago atrasado. Incobrable: ya no se puede recuperar legalmente.</p></details>
-
-<details><summary>¿Qué es la comisión Inviertook?</summary><p>Costo al momento de invertir, varía según monto y plazo.</p></details>
-
-<details><summary>¿Qué condiciones deben cumplir las empresas solicitantes?</summary><p>Evaluación financiera, antecedentes comerciales, comportamiento de pago.</p></details>
-
-<details><summary>¿Qué significa que el pago fue en plazo normal?</summary><p>Hasta 30 días después del vencimiento se considera dentro de plazo normal.</p></details>
-
-<details><summary>¿Qué es el saldo Inviertook?</summary><p>Tu dinero disponible para invertir o retirar.</p></details>
-
-<details><summary>¿Cómo obtengo saldo disponible?</summary><p>Abonando dinero o recibiendo retornos de inversiones.</p></details>
-
-<details><summary>¿Debo abonar cada vez que quiera invertir?</summary><p>No, puedes usar saldo ya disponible o reinvertir retornos.</p></details>
-
-<details><summary>¿Hay un monto máximo para el saldo?</summary><p>No hay límite total. Cada abono debe ser hasta $5.000.000.</p></details>
-
-<details><summary>¿De quién es el dinero en mi saldo?</summary><p>Es 100% tuyo. Tú decides si invertirlo o retirarlo.</p></details>
-
-<details><summary>¿Qué hago si Khipu no reconoce mi banco?</summary><p>Realiza una transferencia manual directa a la cuenta indicada.</p></details>
-
-<details><summary>¿Puede un tercero retirar mi saldo?</summary><p>No. Solo el titular de la cuenta puede solicitar el retiro.</p></details>
-
-<details><summary>¿Qué pasa si la empresa solicitante prepaga?</summary><p>Recibes capital más intereses anticipadamente.</p></details>
-
-<details><summary>¿Qué pasa si el crédito entra en mora?</summary><p>Ganas intereses moratorios y se gestiona el cobro.</p></details>
-
-  </div>
+  <p>Accede a las mejores oportunidades de inversión en pymes chilenas.</p>
 </section>
+
 <section id="nosotros" class="nosotros">
   <h2>Nosotros</h2>
-  <p>Buscamos resolver la desigualdad en el acceso a capital de las pequeñas y medianas empresas para acelerar su crecimiento. Conectamos inversionistas conscientes con empresas que impulsan el desarrollo económico.</p>
+  <p>Buscamos resolver la desigualdad en el acceso a capital de las pequeñas y medianas empresas para acelerar su crecimiento.</p>
 </section>
+
 <section id="ayuda" class="ayuda">
   <h2>Ayuda</h2>
-  <p>¿Tienes preguntas? Contáctanos a través del formulario o por WhatsApp:</p>
-  <a href="https://wa.me/56997245817" target="_blank" style="display:inline-block;margin:10px;padding:10px;background:#25d366;color:white;border-radius:6px;text-decoration:none;font-weight:bold;">💬 WhatsApp</a>
-  <form action="https://formsubmit.co/inviertoook@gmail.com" method="POST">
-    <input type="hidden" name="_captcha" value="false">
-    <label>Nombre:<input type="text" name="nombre" required></label>
-    <label>Email:<input type="email" name="email" required></label>
-    <label>Mensaje:<textarea name="mensaje" rows="4" required></textarea></label>
-    <button type="submit">Enviar mensaje</button>
-  </form>
+  <p>¿Tienes preguntas? Contáctanos vía WhatsApp o nuestro formulario de contacto.</p>
+</section>
+
+<section id="ingresar" class="hidden">
+  <h2>¿En qué pestaña te quieres registrar?</h2>
+  <p style="cursor:pointer; font-weight:bold;" onclick="mostrarFormulario('Inversionista')">Inversionista</p>
+  <p style="cursor:pointer; font-weight:bold;" onclick="mostrarFormulario('Financiamiento')">Financiamiento</p>
+
+  <div id="formulario" class="formulario hidden">
+    <h3 id="tituloFormulario"></h3>
+    <label>Email</label>
+    <input type="email" id="email">
+    <label>Contraseña</label>
+    <input type="password" id="password">
+    <label>Confirmar contraseña</label>
+    <input type="password" id="confirmPassword">
+    <div class="checkbox">
+      <input type="checkbox" id="politicas"> Acepto las Políticas de Privacidad y Términos.
+    </div>
+    <button id="crearCuenta" onclick="crearCuenta()">Crear cuenta</button>
+  </div>
 </section>
 </main>
+
 <footer>
   &copy; 2024 Inviertook. Todos los derechos reservados.
 </footer>
+
 <script>
 function mostrarSeccion(id, enlace) {
-  document.querySelectorAll('main section').forEach(sec => { sec.classList.remove('active'); });
+  document.querySelectorAll('main section').forEach(sec => sec.classList.remove('active'));
   const target = document.getElementById(id);
   if (target) { target.classList.add('active'); }
   document.querySelectorAll('nav a').forEach(a => a.classList.remove('active-tab'));
   if (enlace) enlace.classList.add('active-tab');
 }
-window.onload = function () { mostrarSeccion('financiamiento', document.querySelector('nav a')); };
+
+function mostrarIngreso() {
+  document.querySelectorAll('main section').forEach(sec => sec.classList.remove('active'));
+  document.getElementById('ingresar').classList.remove('hidden');
+  document.getElementById('ingresar').classList.add('active');
+}
+
+function mostrarFormulario(tipo) {
+  document.getElementById('formulario').classList.remove('hidden');
+  document.getElementById('tituloFormulario').innerText = "Registro " + tipo;
+}
+
+function validarFormulario() {
+  const email = document.getElementById('email').value.trim();
+  const password = document.getElementById('password').value;
+  const confirmPassword = document.getElementById('confirmPassword').value;
+  const politicas = document.getElementById('politicas').checked;
+
+  const passwordValida = password.length >= 6 && password.length <= 12 &&
+    /[A-Z]/.test(password) && /[0-9]/.test(password);
+
+  const coincide = password === confirmPassword;
+
+  return email && passwordValida && coincide && politicas;
+}
+
+function crearCuenta() {
+  if (validarFormulario()) {
+    alert("Cuenta creada con éxito 🎉");
+  } else {
+    alert("Revisa los requisitos del formulario.");
+  }
+}
+
+document.querySelectorAll('input, #politicas').forEach(elem => {
+  elem.addEventListener('input', () => {
+    document.getElementById('crearCuenta').style.display = validarFormulario() ? 'block' : 'none';
+  });
+});
 </script>
 </body>
 </html>
